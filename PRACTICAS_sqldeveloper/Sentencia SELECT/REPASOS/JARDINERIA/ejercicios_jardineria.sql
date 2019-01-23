@@ -4,7 +4,7 @@
  */
 SELECT  CIUDAD, TELEFONO
 FROM OFICINAS
-WHERE PAIS = 'EEUU' ORDER BY CIUDAD;
+WHERE UPPER(PAIS) = 'EEUU' ORDER BY CIUDAD;
 
  /*EJ-2
  Obtener una lista con el código de oficina, ciudad, región y país de aquellas
@@ -12,7 +12,7 @@ WHERE PAIS = 'EEUU' ORDER BY CIUDAD;
  */
  SELECT CODIGOOFICINA, CIUDAD,REGION,PAIS
  FROM OFICINAS
- WHERE PAIS LIKE 'E%';
+ WHERE UPPER(PAIS) LIKE 'E%';
  
  /*EJ-3
  Obtener los distintos estados por los que puede pasar un pedido.
